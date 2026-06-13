@@ -1,0 +1,237 @@
+2026-06-13 14:13:33,625 -INFO -Making the Vectorstore.......
+2026-06-13 14:13:33,625 -INFO -Loading files from data/
+2026-06-13 14:13:43,412 -INFO -Successfully fetched 759 of documents
+2026-06-13 14:13:43,412 -INFO -Splitting759 documents into chunks
+2026-06-13 14:13:43,500 -INFO -Generated 7080 text chunks
+2026-06-13 14:13:43,500 -INFO -Generating your new vector store
+2026-06-13 14:13:43,500 -INFO -initializing ur hugging face embedding model....
+2026-06-13 14:13:50,763 -INFO -Use pytorch device_name: cpu
+2026-06-13 14:13:50,763 -INFO -Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-06-13 14:13:56,926 -INFO -successfully loaded the embedding model
+2026-06-13 14:15:38,798 -INFO -Loading faiss with AVX2 support.
+2026-06-13 14:15:38,798 -INFO -Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-06-13 14:15:38,798 -INFO -Loading faiss.
+2026-06-13 14:15:38,951 -INFO -Successfully loaded faiss.
+2026-06-13 14:15:39,120 -INFO -Saving vectorstore....
+2026-06-13 14:15:39,155 -INFO -Vectorstore save successfully.....
+2026-06-13 14:15:39,159 -INFO -Vectorstore created successfully.....
+2026-06-13 16:21:54,804 -INFO -[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.71.148.59:5000
+2026-06-13 16:21:54,804 -INFO -[33mPress CTRL+C to quit[0m
+2026-06-13 16:22:03,585 -ERROR -Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\LOQ\OneDrive\Desktop\medical\medical\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\LOQ\OneDrive\Desktop\medical\medical\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\LOQ\OneDrive\Desktop\medical\medical\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\LOQ\OneDrive\Desktop\medical\medical\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\LOQ\OneDrive\Desktop\medical\app\application.py", line 54, in index
+    return render_template("index.html",messages=session.get("messages",[]))
+  File "C:\Users\LOQ\OneDrive\Desktop\medical\medical\Lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\LOQ\OneDrive\Desktop\medical\medical\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LOQ\OneDrive\Desktop\medical\medical\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\LOQ\OneDrive\Desktop\medical\medical\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\LOQ\OneDrive\Desktop\medical\medical\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LOQ\OneDrive\Desktop\medical\medical\Lib\site-packages\flask\templating.py", line 66, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LOQ\OneDrive\Desktop\medical\medical\Lib\site-packages\flask\templating.py", line 100, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2026-06-13 16:22:03,588 -INFO -127.0.0.1 - - [13/Jun/2026 16:22:03] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-06-13 16:22:51,468 -INFO -[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.71.148.59:5000
+2026-06-13 16:22:51,468 -INFO -[33mPress CTRL+C to quit[0m
+2026-06-13 16:23:00,653 -INFO -127.0.0.1 - - [13/Jun/2026 16:23:00] "GET / HTTP/1.1" 200 -
+2026-06-13 16:23:07,069 -INFO -Loading vector store for context
+2026-06-13 16:23:07,069 -INFO -initializing ur hugging face embedding model....
+2026-06-13 16:23:13,323 -INFO -Use pytorch device_name: cpu
+2026-06-13 16:23:13,323 -INFO -Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-06-13 16:23:19,546 -INFO -successfully loaded the embedding model
+2026-06-13 16:23:19,546 -INFO -Loading EXisting vectorstore.....
+2026-06-13 16:23:19,555 -INFO -Loading faiss with AVX2 support.
+2026-06-13 16:23:19,555 -INFO -Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-06-13 16:23:19,555 -INFO -Loading faiss.
+2026-06-13 16:23:19,592 -INFO -Successfully loaded faiss.
+2026-06-13 16:23:19,657 -INFO -Loading Llm from Groq....
+2026-06-13 16:23:20,763 -INFO -Llm loaded Successfully from groq....
+2026-06-13 16:23:20,764 -INFO -Successfully created the QA chain
+2026-06-13 16:23:21,509 -INFO -HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-13 16:23:21,529 -INFO -127.0.0.1 - - [13/Jun/2026 16:23:21] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-06-13 16:23:21,534 -INFO -127.0.0.1 - - [13/Jun/2026 16:23:21] "GET / HTTP/1.1" 200 -
+2026-06-13 16:31:46,424 -INFO -127.0.0.1 - - [13/Jun/2026 16:31:46] "GET / HTTP/1.1" 200 -
+2026-06-13 16:31:46,732 -INFO -127.0.0.1 - - [13/Jun/2026 16:31:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-13 16:32:06,076 -INFO -Loading vector store for context
+2026-06-13 16:32:06,077 -INFO -initializing ur hugging face embedding model....
+2026-06-13 16:32:06,079 -INFO -Use pytorch device_name: cpu
+2026-06-13 16:32:06,079 -INFO -Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-06-13 16:32:12,514 -INFO -successfully loaded the embedding model
+2026-06-13 16:32:12,514 -INFO -Loading EXisting vectorstore.....
+2026-06-13 16:32:12,570 -INFO -Loading Llm from Groq....
+2026-06-13 16:32:13,164 -INFO -Llm loaded Successfully from groq....
+2026-06-13 16:32:13,164 -INFO -Successfully created the QA chain
+2026-06-13 16:32:15,072 -INFO -HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-13 16:32:15,077 -INFO -127.0.0.1 - - [13/Jun/2026 16:32:15] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-06-13 16:32:15,081 -INFO -127.0.0.1 - - [13/Jun/2026 16:32:15] "GET / HTTP/1.1" 200 -
+2026-06-13 16:32:22,520 -INFO -127.0.0.1 - - [13/Jun/2026 16:32:22] "[32mGET /clear HTTP/1.1[0m" 302 -
+2026-06-13 16:32:22,525 -INFO -127.0.0.1 - - [13/Jun/2026 16:32:22] "GET / HTTP/1.1" 200 -
+2026-06-13 16:32:50,377 -INFO -Loading vector store for context
+2026-06-13 16:32:50,377 -INFO -initializing ur hugging face embedding model....
+2026-06-13 16:32:50,380 -INFO -Use pytorch device_name: cpu
+2026-06-13 16:32:50,380 -INFO -Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-06-13 16:32:56,520 -INFO -successfully loaded the embedding model
+2026-06-13 16:32:56,520 -INFO -Loading EXisting vectorstore.....
+2026-06-13 16:32:56,556 -INFO -Loading Llm from Groq....
+2026-06-13 16:32:57,158 -INFO -Llm loaded Successfully from groq....
+2026-06-13 16:32:57,159 -INFO -Successfully created the QA chain
+2026-06-13 16:32:57,788 -INFO -HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-13 16:32:57,795 -INFO -127.0.0.1 - - [13/Jun/2026 16:32:57] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-06-13 16:32:57,800 -INFO -127.0.0.1 - - [13/Jun/2026 16:32:57] "GET / HTTP/1.1" 200 -
+2026-06-13 16:33:04,336 -INFO -127.0.0.1 - - [13/Jun/2026 16:33:04] "[32mGET /clear HTTP/1.1[0m" 302 -
+2026-06-13 16:33:04,343 -INFO -127.0.0.1 - - [13/Jun/2026 16:33:04] "GET / HTTP/1.1" 200 -
+2026-06-13 16:35:43,251 -INFO -Loading vector store for context
+2026-06-13 16:35:43,252 -INFO -initializing ur hugging face embedding model....
+2026-06-13 16:35:43,253 -INFO -Use pytorch device_name: cpu
+2026-06-13 16:35:43,253 -INFO -Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-06-13 16:35:47,754 -INFO -Loading vector store for context
+2026-06-13 16:35:47,755 -INFO -initializing ur hugging face embedding model....
+2026-06-13 16:35:47,756 -INFO -Use pytorch device_name: cpu
+2026-06-13 16:35:47,756 -INFO -Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-06-13 16:35:49,593 -INFO -successfully loaded the embedding model
+2026-06-13 16:35:49,593 -INFO -Loading EXisting vectorstore.....
+2026-06-13 16:35:49,619 -INFO -Loading Llm from Groq....
+2026-06-13 16:35:49,971 -INFO -Llm loaded Successfully from groq....
+2026-06-13 16:35:49,971 -INFO -Successfully created the QA chain
+2026-06-13 16:35:50,591 -INFO -HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-13 16:35:50,595 -INFO -127.0.0.1 - - [13/Jun/2026 16:35:50] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-06-13 16:35:53,892 -INFO -successfully loaded the embedding model
+2026-06-13 16:35:53,892 -INFO -Loading EXisting vectorstore.....
+2026-06-13 16:35:53,916 -INFO -Loading Llm from Groq....
+2026-06-13 16:35:54,266 -INFO -Llm loaded Successfully from groq....
+2026-06-13 16:35:54,266 -INFO -Successfully created the QA chain
+2026-06-13 16:35:54,309 -INFO -Loading vector store for context
+2026-06-13 16:35:54,309 -INFO -initializing ur hugging face embedding model....
+2026-06-13 16:35:54,310 -INFO -Use pytorch device_name: cpu
+2026-06-13 16:35:54,310 -INFO -Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-06-13 16:35:54,717 -INFO -Loading vector store for context
+2026-06-13 16:35:54,717 -INFO -initializing ur hugging face embedding model....
+2026-06-13 16:35:54,720 -INFO -Use pytorch device_name: cpu
+2026-06-13 16:35:54,720 -INFO -Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-06-13 16:35:54,827 -INFO -HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-13 16:35:54,831 -INFO -127.0.0.1 - - [13/Jun/2026 16:35:54] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-06-13 16:35:54,943 -INFO -Loading vector store for context
+2026-06-13 16:35:54,944 -INFO -initializing ur hugging face embedding model....
+2026-06-13 16:35:54,945 -INFO -Use pytorch device_name: cpu
+2026-06-13 16:35:54,945 -INFO -Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-06-13 16:35:55,166 -INFO -Loading vector store for context
+2026-06-13 16:35:55,166 -INFO -initializing ur hugging face embedding model....
+2026-06-13 16:35:55,167 -INFO -Use pytorch device_name: cpu
+2026-06-13 16:35:55,167 -INFO -Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-06-13 16:36:00,629 -INFO -successfully loaded the embedding model
+2026-06-13 16:36:00,630 -INFO -Loading EXisting vectorstore.....
+2026-06-13 16:36:00,657 -INFO -Loading Llm from Groq....
+2026-06-13 16:36:00,695 -INFO -Loading vector store for context
+2026-06-13 16:36:00,695 -INFO -initializing ur hugging face embedding model....
+2026-06-13 16:36:00,697 -INFO -Use pytorch device_name: cpu
+2026-06-13 16:36:00,697 -INFO -Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-06-13 16:36:01,076 -INFO -Llm loaded Successfully from groq....
+2026-06-13 16:36:01,076 -INFO -Successfully created the QA chain
+2026-06-13 16:36:01,202 -INFO -successfully loaded the embedding model
+2026-06-13 16:36:01,202 -INFO -Loading EXisting vectorstore.....
+2026-06-13 16:36:01,235 -INFO -Loading Llm from Groq....
+2026-06-13 16:36:01,607 -INFO -Llm loaded Successfully from groq....
+2026-06-13 16:36:01,607 -INFO -Successfully created the QA chain
+2026-06-13 16:36:01,850 -INFO -successfully loaded the embedding model
+2026-06-13 16:36:01,850 -INFO -Loading EXisting vectorstore.....
+2026-06-13 16:36:01,879 -INFO -Loading Llm from Groq....
+2026-06-13 16:36:02,043 -INFO -HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-13 16:36:02,047 -INFO -127.0.0.1 - - [13/Jun/2026 16:36:02] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-06-13 16:36:02,170 -INFO -HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-13 16:36:02,174 -INFO -127.0.0.1 - - [13/Jun/2026 16:36:02] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-06-13 16:36:02,231 -INFO -Llm loaded Successfully from groq....
+2026-06-13 16:36:02,232 -INFO -Successfully created the QA chain
+2026-06-13 16:36:02,585 -INFO -successfully loaded the embedding model
+2026-06-13 16:36:02,585 -INFO -Loading EXisting vectorstore.....
+2026-06-13 16:36:02,783 -INFO -Loading Llm from Groq....
+2026-06-13 16:36:02,788 -INFO -HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-13 16:36:02,792 -INFO -127.0.0.1 - - [13/Jun/2026 16:36:02] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-06-13 16:36:03,131 -INFO -Llm loaded Successfully from groq....
+2026-06-13 16:36:03,131 -INFO -Successfully created the QA chain
+2026-06-13 16:36:03,652 -INFO -HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-13 16:36:03,657 -INFO -127.0.0.1 - - [13/Jun/2026 16:36:03] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-06-13 16:36:06,838 -INFO -successfully loaded the embedding model
+2026-06-13 16:36:06,838 -INFO -Loading EXisting vectorstore.....
+2026-06-13 16:36:06,867 -INFO -Loading Llm from Groq....
+2026-06-13 16:36:07,225 -INFO -Llm loaded Successfully from groq....
+2026-06-13 16:36:07,226 -INFO -Successfully created the QA chain
+2026-06-13 16:36:07,340 -INFO -127.0.0.1 - - [13/Jun/2026 16:36:07] "[32mGET /clear HTTP/1.1[0m" 302 -
+2026-06-13 16:36:07,346 -INFO -127.0.0.1 - - [13/Jun/2026 16:36:07] "GET / HTTP/1.1" 200 -
+2026-06-13 16:36:07,868 -INFO -HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-13 16:36:07,873 -INFO -127.0.0.1 - - [13/Jun/2026 16:36:07] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-06-13 16:37:31,435 -INFO -Loading vector store for context
+2026-06-13 16:37:31,435 -INFO -initializing ur hugging face embedding model....
+2026-06-13 16:37:31,436 -INFO -Use pytorch device_name: cpu
+2026-06-13 16:37:31,436 -INFO -Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-06-13 16:37:36,682 -INFO -successfully loaded the embedding model
+2026-06-13 16:37:36,682 -INFO -Loading EXisting vectorstore.....
+2026-06-13 16:37:36,711 -INFO -Loading Llm from Groq....
+2026-06-13 16:37:37,048 -INFO -Llm loaded Successfully from groq....
+2026-06-13 16:37:37,048 -INFO -Successfully created the QA chain
+2026-06-13 16:37:37,611 -INFO -HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-13 16:37:37,615 -INFO -127.0.0.1 - - [13/Jun/2026 16:37:37] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-06-13 16:37:37,620 -INFO -127.0.0.1 - - [13/Jun/2026 16:37:37] "GET / HTTP/1.1" 200 -
+2026-06-13 16:38:03,413 -INFO -Loading vector store for context
+2026-06-13 16:38:03,413 -INFO -initializing ur hugging face embedding model....
+2026-06-13 16:38:03,414 -INFO -Use pytorch device_name: cpu
+2026-06-13 16:38:03,414 -INFO -Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-06-13 16:38:09,686 -INFO -successfully loaded the embedding model
+2026-06-13 16:38:09,686 -INFO -Loading EXisting vectorstore.....
+2026-06-13 16:38:09,713 -INFO -Loading Llm from Groq....
+2026-06-13 16:38:10,092 -INFO -Llm loaded Successfully from groq....
+2026-06-13 16:38:10,092 -INFO -Successfully created the QA chain
+2026-06-13 16:38:10,696 -INFO -HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-13 16:38:10,701 -INFO -127.0.0.1 - - [13/Jun/2026 16:38:10] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-06-13 16:38:10,706 -INFO -127.0.0.1 - - [13/Jun/2026 16:38:10] "GET / HTTP/1.1" 200 -
+2026-06-13 16:38:13,208 -INFO -127.0.0.1 - - [13/Jun/2026 16:38:13] "[32mGET /clear HTTP/1.1[0m" 302 -
+2026-06-13 16:38:13,214 -INFO -127.0.0.1 - - [13/Jun/2026 16:38:13] "GET / HTTP/1.1" 200 -
+2026-06-13 16:45:30,768 -INFO -[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.71.148.59:5000
+2026-06-13 16:45:30,769 -INFO -[33mPress CTRL+C to quit[0m
+2026-06-13 16:46:14,485 -INFO -127.0.0.1 - - [13/Jun/2026 16:46:14] "GET / HTTP/1.1" 200 -
+2026-06-13 16:46:37,543 -INFO -Loading vector store for context
+2026-06-13 16:46:37,543 -INFO -initializing ur hugging face embedding model....
+2026-06-13 16:46:39,764 -INFO -Use pytorch device_name: cpu
+2026-06-13 16:46:39,764 -INFO -Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-06-13 16:46:46,096 -INFO -successfully loaded the embedding model
+2026-06-13 16:46:46,096 -INFO -Loading EXisting vectorstore.....
+2026-06-13 16:46:46,099 -INFO -Loading faiss with AVX2 support.
+2026-06-13 16:46:46,099 -INFO -Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-06-13 16:46:46,099 -INFO -Loading faiss.
+2026-06-13 16:46:46,120 -INFO -Successfully loaded faiss.
+2026-06-13 16:46:46,165 -INFO -Loading Llm from Groq....
+2026-06-13 16:46:46,707 -INFO -Llm loaded Successfully from groq....
+2026-06-13 16:46:46,707 -INFO -Successfully created the QA chain
+2026-06-13 16:46:47,260 -INFO -HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-13 16:46:47,402 -INFO -127.0.0.1 - - [13/Jun/2026 16:46:47] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-06-13 16:46:47,408 -INFO -127.0.0.1 - - [13/Jun/2026 16:46:47] "GET / HTTP/1.1" 200 -

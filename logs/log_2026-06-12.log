@@ -1,0 +1,69 @@
+2026-06-12 16:19:33,782 -INFO -Making the Vectorstore.......
+2026-06-12 16:19:33,783 -INFO -Loading files from data/
+2026-06-12 16:19:43,193 -INFO -Successfully fetched 759 of documents
+2026-06-12 16:19:43,193 -INFO -Splitting759 documents into chunks
+2026-06-12 16:19:43,281 -INFO -Generated 7080 text chunks
+2026-06-12 16:19:43,281 -INFO -Generating your new vector store
+2026-06-12 16:19:43,281 -INFO -initializing ur hugging face embedding model....
+2026-06-12 16:19:51,628 -INFO -Use pytorch device_name: cpu
+2026-06-12 16:19:51,628 -INFO -Load pretrained SentenceTransformer: sentence_transfermers/all-MiniLM-L6-v2
+2026-06-12 16:19:52,173 -WARNING -No sentence-transformers model found with name sentence_transfermers/all-MiniLM-L6-v2. Creating a new one with mean pooling.
+2026-06-12 16:19:52,419 -ERROR -Failed to load embedding model  | Error: sentence_transfermers/all-MiniLM-L6-v2 is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`File:C:\Users\LOQ\OneDrive\Desktop\medical\app\components\embeddings.py | Line: 10
+2026-06-12 16:19:52,419 -ERROR -Failed to create vectorstore  | Error: Failed to load embedding model  | Error: sentence_transfermers/all-MiniLM-L6-v2 is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`File:C:\Users\LOQ\OneDrive\Desktop\medical\app\components\embeddings.py | Line: 10File:C:\Users\LOQ\OneDrive\Desktop\medical\app\components\vector_store.py | Line: 35
+2026-06-12 16:19:52,420 -ERROR -Failed to create new vector | Error: Failed to create vectorstore  | Error: Failed to load embedding model  | Error: sentence_transfermers/all-MiniLM-L6-v2 is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`File:C:\Users\LOQ\OneDrive\Desktop\medical\app\components\embeddings.py | Line: 10File:C:\Users\LOQ\OneDrive\Desktop\medical\app\components\vector_store.py | Line: 35File:C:\Users\LOQ\OneDrive\Desktop\medical\app\components\data_loader.py | Line: 16
+2026-06-12 16:26:53,904 -INFO -Making the Vectorstore.......
+2026-06-12 16:26:53,904 -INFO -Loading files from data/
+2026-06-12 16:27:02,896 -INFO -Successfully fetched 759 of documents
+2026-06-12 16:27:02,896 -INFO -Splitting759 documents into chunks
+2026-06-12 16:27:02,984 -INFO -Generated 7080 text chunks
+2026-06-12 16:27:02,984 -INFO -Generating your new vector store
+2026-06-12 16:27:02,984 -INFO -initializing ur hugging face embedding model....
+2026-06-12 16:27:04,625 -INFO -Use pytorch device_name: cpu
+2026-06-12 16:27:04,625 -INFO -Load pretrained SentenceTransformer: sentence_transfermers/all-MiniLM-L6-v2
+2026-06-12 16:27:05,465 -WARNING -No sentence-transformers model found with name sentence_transfermers/all-MiniLM-L6-v2. Creating a new one with mean pooling.
+2026-06-12 16:27:05,764 -ERROR -Failed to load embedding model  | Error: sentence_transfermers/all-MiniLM-L6-v2 is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`File:C:\Users\LOQ\OneDrive\Desktop\medical\app\components\embeddings.py | Line: 10
+2026-06-12 16:27:05,764 -ERROR -Failed to create vectorstore  | Error: Failed to load embedding model  | Error: sentence_transfermers/all-MiniLM-L6-v2 is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`File:C:\Users\LOQ\OneDrive\Desktop\medical\app\components\embeddings.py | Line: 10File:C:\Users\LOQ\OneDrive\Desktop\medical\app\components\vector_store.py | Line: 35
+2026-06-12 16:27:05,765 -ERROR -Failed to create new vector | Error: Failed to create vectorstore  | Error: Failed to load embedding model  | Error: sentence_transfermers/all-MiniLM-L6-v2 is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`File:C:\Users\LOQ\OneDrive\Desktop\medical\app\components\embeddings.py | Line: 10File:C:\Users\LOQ\OneDrive\Desktop\medical\app\components\vector_store.py | Line: 35File:C:\Users\LOQ\OneDrive\Desktop\medical\app\components\data_loader.py | Line: 16
+2026-06-12 16:29:27,437 -INFO -Making the Vectorstore.......
+2026-06-12 16:29:27,438 -INFO -Loading files from data/
+2026-06-12 16:29:36,478 -INFO -Successfully fetched 759 of documents
+2026-06-12 16:29:36,478 -INFO -Splitting759 documents into chunks
+2026-06-12 16:29:36,564 -INFO -Generated 7080 text chunks
+2026-06-12 16:29:36,564 -INFO -Generating your new vector store
+2026-06-12 16:29:36,564 -INFO -initializing ur hugging face embedding model....
+2026-06-12 16:29:38,137 -INFO -Use pytorch device_name: cpu
+2026-06-12 16:29:38,138 -INFO -Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-06-12 16:29:43,990 -WARNING -Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2026-06-12 16:30:03,347 -INFO -successfully loaded the embedding model
+2026-06-12 16:31:43,370 -INFO -Loading faiss with AVX2 support.
+2026-06-12 16:31:43,370 -INFO -Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-06-12 16:31:43,370 -INFO -Loading faiss.
+2026-06-12 16:31:43,787 -INFO -Successfully loaded faiss.
+2026-06-12 16:31:43,919 -INFO -Saving vectorstore....
+2026-06-12 16:31:43,952 -INFO -Vectorstore save successfully.....
+2026-06-12 16:31:43,956 -INFO -Vectorstore created successfully.....
+2026-06-12 16:34:07,544 -INFO -Making the Vectorstore.......
+2026-06-12 16:34:07,544 -INFO -Loading files from data/
+2026-06-12 16:34:16,915 -INFO -Successfully fetched 759 of documents
+2026-06-12 16:34:16,915 -INFO -Splitting759 documents into chunks
+2026-06-12 16:34:17,003 -INFO -Generated 7080 text chunks
+2026-06-12 16:34:17,004 -INFO -Generating your new vector store
+2026-06-12 16:34:17,004 -INFO -initializing ur hugging face embedding model....
+2026-06-12 16:34:18,609 -INFO -Use pytorch device_name: cpu
+2026-06-12 16:34:18,609 -INFO -Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-06-12 16:34:24,451 -INFO -successfully loaded the embedding model
+2026-06-12 16:36:07,553 -INFO -Loading faiss with AVX2 support.
+2026-06-12 16:36:07,554 -INFO -Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-06-12 16:36:07,554 -INFO -Loading faiss.
+2026-06-12 16:36:07,586 -INFO -Successfully loaded faiss.
+2026-06-12 16:36:07,749 -INFO -Saving vectorstore....
+2026-06-12 16:36:07,788 -INFO -Vectorstore save successfully.....
+2026-06-12 16:36:07,792 -INFO -Vectorstore created successfully.....
