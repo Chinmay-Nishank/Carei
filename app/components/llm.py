@@ -14,8 +14,8 @@ def load_llm(model_name : str="llama-3.3-70b-versatile",groq_api_key:str= GROQ_A
         llm = ChatGroq(
             groq_api_key = groq_api_key,
             model_name = model_name,
-            temperature= 0.7,
-            max_tokens= 250,
+            temperature=0.3,
+            max_tokens=2048
         )
         logger.info("Llm loaded Successfully from groq....")
         return llm

@@ -235,3 +235,14 @@ ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
 2026-06-13 16:46:47,260 -INFO -HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 2026-06-13 16:46:47,402 -INFO -127.0.0.1 - - [13/Jun/2026 16:46:47] "[32mPOST / HTTP/1.1[0m" 302 -
 2026-06-13 16:46:47,408 -INFO -127.0.0.1 - - [13/Jun/2026 16:46:47] "GET / HTTP/1.1" 200 -
+2026-06-13 16:56:11,272 -INFO -[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.71.148.59:5000
+2026-06-13 16:56:11,272 -INFO -[33mPress CTRL+C to quit[0m
+2026-06-13 16:56:28,422 -ERROR -10.71.148.59 - - [13/Jun/2026 16:56:28] code 400, message Bad request syntax ('\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03c\x92S\x88Lø®}dUù~\x91Ï\x9bÁN^¢}÷\x10Íü\x0e*:\x907LÕ\x92 ')
+2026-06-13 16:56:28,423 -INFO -10.71.148.59 - - [13/Jun/2026 16:56:28] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03c\x92S\x88Lø®}dUù~\x91Ï\x9bÁN^¢}÷\x10Íü\x0e*:\x907LÕ\x92 [0m" 400 -
+2026-06-13 16:56:28,431 -ERROR -10.71.148.59 - - [13/Jun/2026 16:56:28] code 400, message Bad request version ('6¾µ')
+2026-06-13 16:56:28,431 -INFO -10.71.148.59 - - [13/Jun/2026 16:56:28] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03.À-×\x03î²X\x09\x00òëUtkS×\x7fm-\x9d«®¾\x16q£Ä\x07\x18\x08Æ \x0c®ë¶¦\x11è<ò%¯]\x9b]æ½^9ð¤PZµÞÕ\x096¾µ[0m" 400 -
+2026-06-13 16:56:35,499 -INFO -10.71.148.59 - - [13/Jun/2026 16:56:35] "GET / HTTP/1.1" 200 -
+2026-06-13 16:56:35,605 -INFO -10.71.148.59 - - [13/Jun/2026 16:56:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

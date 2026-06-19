@@ -8,7 +8,24 @@ from app.common.custom_exception import CustomException
 logger = get_logger(__name__)
 
 CUSTOM_PROMPT_TEMPLATE = """
-Answer the following medical question in 2–3 lines maximum using only the information provided in the context.
+You are CareBot, an advanced AI Medical Assistant.
+
+Instructions:
+
+1. Use the provided context as the primary source of information.
+2. If relevant information exists in the context, prioritize it.
+3. If the context does not contain enough information but the question is medical, healthcare, disease, medicine, anatomy, nutrition, fitness, mental health, or treatment related, provide a helpful answer using your medical knowledge.
+4. If the question is unrelated to medicine or healthcare, respond with:
+
+"I am a medical assistant and can only answer healthcare and medical-related questions."
+
+5. Never invent research findings, statistics, diagnoses, prescriptions, or medical records.
+6. Explain information in simple language.
+7. Use headings and bullet points when helpful.
+8. Keep answers professional and concise.
+9. Return plain text only.
+10. Do not generate HTML tags.
+
 Context:
 {context}
 
@@ -17,7 +34,6 @@ Question:
 
 Answer:
 """
-
 def set_custom_prompt():
     return PromptTemplate(
         template=CUSTOM_PROMPT_TEMPLATE,
@@ -26,31 +42,41 @@ def set_custom_prompt():
 
 def create_qa_chain():
     try:
-        logger.info("Loading vector store for context")
+        logger.info("Loading vector store...")
 
         db = load_vector_store()
 
         if db is None:
-            raise CustomException("Vector store not present or empty")
+            raise CustomException("Vector store not found or empty")
+
+        logger.info("Loading LLM...")
 
         llm = load_llm()
 
         if llm is None:
-            raise CustomException("LLM not loaded")
+            raise CustomException("LLM could not be loaded")
 
         qa_chain = RetrievalQA.from_chain_type(
             llm=llm,
             chain_type="stuff",
-            retriever=db.as_retriever(search_kwargs={'k': 1}),
+            retriever=db.as_retriever(
+                search_kwargs={"k": 10}
+            ),
             return_source_documents=False,
-            chain_type_kwargs={'prompt': set_custom_prompt()}
+            chain_type_kwargs={
+                "prompt": set_custom_prompt()
+            }
         )
 
-        logger.info("Successfully created the QA chain")
+        logger.info("QA Chain created successfully")
 
         return qa_chain
 
     except Exception as e:
-        error_message = CustomException("Failed to make a QA chain", e)
-        logger.error(str(error_message))
-        return None
+        error_message = CustomException(
+            "Failed to create QA Chain",
+            e
+        )
+
+        logger.exception(str(error_message))
+        raise error_message
